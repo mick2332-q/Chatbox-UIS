@@ -108,13 +108,14 @@ body {
   html, body {
     height: 100vh;
     width: 100vw;
-    overflow: hidden;  /* Evita scroll de la página */
+    overflow: hidden;
     margin: 0;
     padding: 0;
+    position: fixed;
   }
   body {
-    align-items: flex-start;  /* Chat empieza desde arriba */
-    justify-content: center;
+    align-items: stretch;
+    justify-content: stretch;
   }
   .chat-container {
     width: 100vw;
@@ -123,16 +124,29 @@ body {
     border-radius: 0;
     min-height: 0;
     box-shadow: none;
+    margin: 0;
+  }
+  .chat-header {
+    flex: 0 0 auto;
+  }
+  .chat-input {
+    flex: 0 0 auto;
+  }
+  .chat-messages {
+    flex: 1 1 0%;
+    min-height: 0;
   }
   .chat-header, .chat-input, .chat-messages {
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
   }
   .chat-messages {
     padding-top: 10px;
     padding-bottom: 8px;
   }
 }
+
+
 
 
 
