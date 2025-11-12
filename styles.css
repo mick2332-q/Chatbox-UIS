@@ -105,31 +105,35 @@ body {
 
 
 @media (max-width: 600px) {
-  body {
-    align-items: flex-start;  /* Hace que el chat comience desde arriba */
-    justify-content: flex-start;
-    height: auto;             /* Permite que crezca según el contenido */
-    min-height: 100vh;
+  html, body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;  /* Evita scroll de la página */
+    margin: 0;
+    padding: 0;
   }
-
+  body {
+    align-items: flex-start;  /* Chat empieza desde arriba */
+    justify-content: center;
+  }
   .chat-container {
+    width: 100vw;
     max-width: 100vw;
-    height: 100vh;           /* Ocupa todo el alto en móvil */
+    height: 100vh;
     border-radius: 0;
     min-height: 0;
-    margin-top: 0;           /* Elimina cualquier margen extra */
+    box-shadow: none;
   }
-
   .chat-header, .chat-input, .chat-messages {
     padding-left: 6px;
     padding-right: 6px;
   }
-
   .chat-messages {
     padding-top: 10px;
     padding-bottom: 8px;
   }
 }
+
 
 
 
